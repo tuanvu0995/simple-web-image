@@ -1,0 +1,17 @@
+{
+  "name": "simple-web-image-test-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --trace-warnings index.js --trace-warnings",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "simple-web-image": "1.0.0"
+  },
+  "type": "module",
+  "private": true
+}
