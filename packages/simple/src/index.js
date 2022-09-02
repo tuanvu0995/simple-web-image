@@ -1,3 +1,2 @@
-const SimleWebImage = require('./SimpleWebImage')
-module.exports = SimleWebImage
-
+const SimpleWebImage = require('./SimpleWebImage')
+module.exports = SimpleWebImage

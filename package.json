@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run dev -w simple-web-image-test-app",
-    "test": "npm run test:unit && npm run test:intergration",
+    "test": "npm run test --if-parent --ws",
     "test:unit": "",
     "test:intergration": "",
     "lint": "lint-staged",
@@ -26,6 +26,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "husky": "^8.0.1",
+    "jest": "^29.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
