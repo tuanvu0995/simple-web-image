@@ -21,7 +21,7 @@ jobs:
           node-version: 14.x
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm ci --only=production --ignore-scripts
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
