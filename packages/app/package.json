@@ -1,6 +1,6 @@
 {
   "name": "simple-web-image-test-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "simple-web-image": "1.0.0"
+    "simple-web-image": "2.0.0"
   },
   "private": true
 }
