@@ -53,11 +53,11 @@ function rollback(outputDir) {
 }
 
 /**
- * @summary SimleWebImage
+ * @summary SimpleWebImage
  * @method
  * @param {Object} options
  */
-async function SimleWebImage(options = {}) {
+async function SimpleWebImage(options = {}) {
   const { input, output, format = 'jpg', transforms = undefined } = options
 
   let sourceStream
@@ -102,4 +102,4 @@ async function SimleWebImage(options = {}) {
   }
 }
 
-module.exports = SimleWebImage
+module.exports = SimpleWebImage
