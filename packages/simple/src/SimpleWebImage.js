@@ -72,6 +72,7 @@ async function SimleWebImage(options = {}) {
     sourceStream.pipe(pass)
     await createPromisePipeline(pass, fs.createWriteStream(originOutputPath))
   } catch (err) {
+    console.log(err)
     throw new Error("Can't copy the origin image")
   }
 
