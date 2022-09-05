@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A simple library to process the image in many sizes for the website.",
   "main": "index.js",
+  "engines": {
+    "node": ">=14.15.0"
+  },
   "scripts": {
     "dev": "npm run dev -w simple-web-image-test-app",
     "test": "npm run test --if-parent --ws",

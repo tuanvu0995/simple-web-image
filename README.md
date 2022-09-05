@@ -7,12 +7,12 @@
 
 ## Prerequisites
 
-This project requires NodeJS (version 8 or later) and NPM. Node and NPM are really easy to install. To make sure you have them available on your machine, try running the following command.
+This project requires NodeJS (version 14 or later) and NPM. Node and NPM are really easy to install. To make sure you have them available on your machine, try running the following command.
 
 ```sh
 $ npm -v && node -v
 6.4.1
-v8.16.0
+v14.15.0
 ```
 
 ## Getting Started
@@ -87,6 +87,14 @@ Find a bug, a typo, or something that’s not documented well? We’d love for y
 
 We love your pull requests! Check out our Good First Issue and Help Wanted tags for good issues to tackle. Check out our contributors guide for more information
 
+## Credits
+
+TODO: Write credits
+
+## Authors
+
+- **Vu Lai** - _Initial work_ - [Vulai](https://github.com/tuanvu0995)
+
 ## License
 
-[MIT](LICENSE)
+[MIT License](LICENSE) © Vu Lai
