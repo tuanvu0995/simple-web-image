@@ -1,5 +1,12 @@
 # simple-web-image-test-app
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [8ac6bf7]
+  - simple-web-image@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
