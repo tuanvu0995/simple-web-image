@@ -7,12 +7,12 @@
 
 ## Prerequisites
 
-This project requires NodeJS (version 8 or later) and NPM. Node and NPM are really easy to install. To make sure you have them available on your machine, try running the following command.
+This project requires NodeJS (version 14 or later) and NPM. Node and NPM are really easy to install. To make sure you have them available on your machine, try running the following command.
 
 ```sh
 $ npm -v && node -v
 6.4.1
-v8.16.0
+v14.15.0
 ```
 
 ## Getting Started
@@ -81,12 +81,20 @@ async function run() {
 
 Any contributions from the community are welcome.
 
+Find a bug, a typo, or something that’s not documented well? We’d love for you to open an issue telling us what we can improve! Follow the [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+We love your pull requests! Check out our Good First Issue and Help Wanted tags for good issues to tackle. Check out our contributors guide for more information.
+
 If you like what you see, star us on GitHub
 
-Find a bug, a typo, or something that’s not documented well? We’d love for you to open an issue telling us what we can improve! This project uses [changesets](https://github.com/changesets/changesets), please use their commit message format.
+## Credits
 
-We love your pull requests! Check out our Good First Issue and Help Wanted tags for good issues to tackle. Check out our contributors guide for more information
+TODO: Write credits
+
+## Authors
+
+- **Vu Lai** - _Initial work_ - [Vulai](https://github.com/tuanvu0995)
 
 ## License
 
-[MIT](LICENSE)
+[MIT License](LICENSE) © Vu Lai

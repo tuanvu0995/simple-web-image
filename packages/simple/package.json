@@ -4,7 +4,7 @@
   "description": "A simple library to process the image in many sizes for the website.",
   "main": "src/index.js",
   "engines": {
-    "node": ">=8"
+    "node": ">=14.15.0"
   },
   "scripts": {
     "test": "jest"
