@@ -43,6 +43,16 @@ npm install simple-web-image
 const SimpleWebImage = require('simple-web-image')
 
 SimpleWebImage({ input: './image/TEST.JPG', output: './output' }).catch(console.log)
+
+// or await
+
+async function run() {
+  try {
+    await SimpleWebImage({ input: './image/TEST.JPG', output: './output' })
+  } catch (error) {
+    console.log(error)
+  }
+}
 ```
 
 ## Options
