@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/simple-web-image.svg)](https://badge.fury.io/simple-web-image)
+[![npm version](https://badge.fury.io/js/simple-web-image.svg)](https://badge.fury.io/js/simple-web-image)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 # simple-web-image
