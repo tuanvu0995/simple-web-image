@@ -97,9 +97,14 @@ async function run() {
 
 ## Contributing
 
-A [guide for contributors](GUIDE)
-covers reporting bugs, requesting features and submitting code changes.
+Any contributions from the community are welcome.
+
+If you like what you see, star us on GitHub
+
+Find a bug, a typo, or something that’s not documented well? We’d love for you to open an issue telling us what we can improve! This project uses [changesets](https://github.com/changesets/changesets), please use their commit message format.
+
+We love your pull requests! Check out our Good First Issue and Help Wanted tags for good issues to tackle. Check out our contributors guide for more information
 
 ## License
 
-[MIT](LICENSE)
+[MIT](packages/simple/LICENSE)
