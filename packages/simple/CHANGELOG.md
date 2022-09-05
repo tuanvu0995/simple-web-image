@@ -1,5 +1,11 @@
 # simple-web-image
 
+## 1.0.4
+
+### Patch Changes
+
+- 7d9c9a3: feat: add contributing description
+
 ## 1.0.3
 
 ### Patch Changes

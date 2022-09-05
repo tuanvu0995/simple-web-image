@@ -1,6 +1,6 @@
 {
   "name": "simple-web-image",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple library to process the image in many sizes for the website.",
   "main": "src/index.js",
   "engines": {
