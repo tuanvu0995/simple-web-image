@@ -1,39 +1,21 @@
+[![npm version](https://badge.fury.io/js/simple-web-image.svg)](https://badge.fury.io/simple-web-image)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 # simple-web-image
 
-A simple library to process the image in many sizes for the website.
+> A simple library to process the image to many sizes for the website.
 
-## Description
+## Prerequisites
 
-With this library, you can quickly create multiple versions of your uploaded images in different sizes.
+This project requires NodeJS (version 8 or later) and NPM. Node and NPM are really easy to install. To make sure you have them available on your machine, try running the following command.
 
-Default sizes:
-
-```javascript
-const TRANSFORMS = [
-  {
-    name: 'image',
-    transform: { size: 1600, fit: 'inside', format: 'jpg' },
-  },
-  {
-    name: 'large',
-    transform: { size: 1000, fit: 'inside', format: 'jpg' },
-  },
-  {
-    name: 'medium',
-    transform: { size: 600, fit: 'inside', format: 'jpg' },
-  },
-  {
-    name: 'small',
-    transform: { size: 235, fit: 'cover', format: 'png' },
-  },
-  {
-    name: 'thumbnail',
-    transform: { size: 100, fit: 'cover', format: 'png' },
-  },
-]
+```sh
+$ npm -v && node -v
+6.4.1
+v8.16.0
 ```
 
-## Examples
+## Getting Started
 
 ```sh
 npm install simple-web-image
@@ -59,16 +41,16 @@ async function run() {
 
 ```javascript
 {
-    // The input source. This option can be a path (string) or Readstream.
+    // The input source. This option can be a path (string) or ReadStream.
     input: './image.png',
 
     // The output directory. This path should be unique for each image.
-    output: './output',
+    output: './output/unique-image-id',
 
-    // Optional - The valid image format (jpg, jpeg, png).
+    // Optional - The input format. This field is required for correct image processing. If undefined, "jpg" will be used, but that may be risky.
     format = 'jpg',
 
-    // Optional - The custom transform
+    // Optional - The custom transforms
     transform: [
         {
             name: 'image',
@@ -107,4 +89,4 @@ We love your pull requests! Check out our Good First Issue and Help Wanted tags 
 
 ## License
 
-[MIT](packages/simple/LICENSE)
+[MIT](LICENSE)

@@ -1,7 +1,7 @@
-const fs = require('fs')
 const path = require('path')
-const { pipeline, PassThrough } = require('stream')
 const sharp = require('sharp')
+const { readdir, unlink, createReadStream, createWriteStream } = require('fs')
+const { pipeline, PassThrough } = require('stream')
 
 const TRANSFORMS = [
   {
@@ -41,11 +41,11 @@ function createPromisePipeline(...args) {
 }
 
 function rollback(outputDir) {
-  fs.readdir(outputDir, (err, files) => {
+  readdir(outputDir, (err, files) => {
     if (err) throw err
 
     for (const file of files) {
-      fs.unlink(path.join(outputDir, file), (err) => {
+      unlink(path.join(outputDir, file), (err) => {
         if (err) throw err
       })
     }
@@ -62,7 +62,7 @@ async function SimpleWebImage(options = {}) {
 
   let sourceStream
   if (typeof input === 'string') {
-    sourceStream = fs.createReadStream(input)
+    sourceStream = createReadStream(input)
   }
 
   const originOutputPath = `${output}/origin.${format}`
@@ -70,7 +70,7 @@ async function SimpleWebImage(options = {}) {
   try {
     const pass = new PassThrough()
     sourceStream.pipe(pass)
-    await createPromisePipeline(pass, fs.createWriteStream(originOutputPath))
+    await createPromisePipeline(pass, createWriteStream(originOutputPath))
   } catch (err) {
     console.log(err)
     throw new Error("Can't copy the origin image")
@@ -85,9 +85,9 @@ async function SimpleWebImage(options = {}) {
       })
       .toFormat(transform.format)
 
-    const readStream = fs.createReadStream(originOutputPath)
+    const readStream = createReadStream(originOutputPath)
     const outputPath = `${output}/${name}.${transform.format}`
-    const writeStream = fs.createWriteStream(outputPath)
+    const writeStream = createWriteStream(outputPath)
 
     return createPromisePipeline(readStream, transformer, writeStream)
   })

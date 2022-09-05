@@ -1,7 +1,7 @@
 {
   "name": "simple-web-image-repos",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple library to process the image in many sizes for the website.",
   "main": "index.js",
   "scripts": {
     "dev": "npm run dev -w simple-web-image-test-app",
