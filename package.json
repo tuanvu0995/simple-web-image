@@ -10,7 +10,7 @@
     "dev": "npm run dev -w simple-web-image-test-app",
     "test": "npm run test --if-parent --ws",
     "test:unit": "",
-    "test:intergration": "",
+    "test:integration": "",
     "lint": "lint-staged",
     "changeset": "changeset",
     "version": "changeset version",
