@@ -1,5 +1,11 @@
 # simple-web-image
 
+## 1.0.7
+
+### Patch Changes
+
+- 63ec8ec: feat: spelling correction for README.md
+
 ## 1.0.5
 
 ### Patch Changes
