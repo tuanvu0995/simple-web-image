@@ -89,11 +89,7 @@ If you like what you see, star us on GitHub
 
 ## Roadmap
 
-See the [ROADMAP.md](https://github.com/tuanvu0995/simple-web-image/blob/main/ROADMAO.md)file
-
-## Authors
-
-- **Vu Lai** - _Initial work_ - [Vulai](https://github.com/tuanvu0995)
+See the [ROADMAP.md](https://github.com/tuanvu0995/simple-web-image/blob/main/ROADMAP.md) file
 
 ## License
 
