@@ -1,5 +1,11 @@
 # simple-web-image
 
+## 1.0.5
+
+### Patch Changes
+
+- 594a82c: feat: add roadmap.md file
+
 ## 1.0.4
 
 ### Patch Changes
