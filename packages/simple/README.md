@@ -87,9 +87,9 @@ We love your pull requests! Check out our Good First Issue and Help Wanted tags 
 
 If you like what you see, star us on GitHub
 
-## Credits
+## Roadmap
 
-TODO: Write credits
+See the [ROADMAP.md](https://github.com/tuanvu0995/simple-web-image/blob/main/ROADMAO.md)file
 
 ## Authors
 
@@ -97,4 +97,4 @@ TODO: Write credits
 
 ## License
 
-[MIT License](LICENSE) © Vu Lai
+[MIT License](https://github.com/tuanvu0995/simple-web-image/blob/main/LICENSE) © Vu Lai
