@@ -60,7 +60,7 @@ function rollback(outputDir) {
 async function SimpleWebImage(options = {}) {
   const { input, output, format = 'jpg', transforms = undefined } = options
 
-  let sourceStream
+  let sourceStream = input
   if (typeof input === 'string') {
     sourceStream = createReadStream(input)
   }
