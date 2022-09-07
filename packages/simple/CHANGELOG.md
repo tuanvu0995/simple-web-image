@@ -1,5 +1,11 @@
 # simple-web-image
 
+## 1.0.8
+
+### Patch Changes
+
+- 94eaebe: fix: input source stream
+
 ## 1.0.7
 
 ### Patch Changes
