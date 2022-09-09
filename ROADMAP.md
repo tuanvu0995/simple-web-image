@@ -1,8 +1,8 @@
 # SWI - Roadmap
 
-This document describes the current status and the upcoming milestones of the IPFS project.
+This document describes the current status and the upcoming milestones of the SWI project.
 
-_Updated: Tue, 360 Sep 2022_
+_Updated: Fri, Sep 9 2022_
 
 ## SWI
 
