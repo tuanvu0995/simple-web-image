@@ -1,5 +1,0 @@
-{
-    "editor.formatOnSave": true,
-    "editor.fontLigatures": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-}
