@@ -89,8 +89,8 @@ If you like what you see, star us on GitHub
 
 ## Roadmap
 
-See the [ROADMAP.md](https://github.com/tuanvu0995/simple-web-image/blob/main/ROADMAP.md) file
+See the [ROADMAP.md](ROADMAP.md) file
 
 ## License
 
-[MIT License](https://github.com/tuanvu0995/simple-web-image/blob/main/LICENSE) © Vu Lai
+[MIT License]LICENSE) © Vu Lai
