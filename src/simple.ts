@@ -1,7 +1,16 @@
 import path from 'path'
 import sharp, { FitEnum, FormatEnum } from 'sharp'
 import { promisify } from 'util'
-import { ReadStream, readdir, unlink, createReadStream, createWriteStream } from 'fs'
+import {
+  ReadStream,
+  readdir,
+  unlink,
+  existsSync,
+  mkdirSync,
+  createReadStream,
+  createWriteStream,
+  WriteStream,
+} from 'fs'
 import { pipeline, PassThrough } from 'stream'
 
 interface ITransform {
@@ -50,12 +59,19 @@ function rollback(outputDir: string): void {
   })
 }
 
-export async function SimpleWebImage(options: SimpleWebImageOptions): Promise<void> {
+function createDirIfNotExists(path: string): void {
+  if (!existsSync(path)) {
+    mkdirSync(path, { recursive: true })
+  }
+}
+
+export = async function SimpleWebImage(options: SimpleWebImageOptions): Promise<void> {
   const { input, output, format = 'jpg', transforms = undefined } = options
 
   const sourceStream: ReadStream = typeof input === 'string' ? createReadStream(input) : input
 
   const originOutputPath = `${output}/origin.${format}`
+  createDirIfNotExists(output)
 
   try {
     const pass = new PassThrough()
@@ -73,9 +89,9 @@ export async function SimpleWebImage(options: SimpleWebImageOptions): Promise<vo
       })
       .toFormat(transform.format)
 
-    const readStream = createReadStream(originOutputPath)
+    const readStream: ReadStream = createReadStream(originOutputPath)
     const outputPath = `${output}/${name}.${transform.format}`
-    const writeStream = createWriteStream(outputPath)
+    const writeStream: WriteStream = createWriteStream(outputPath)
 
     return pipelineAsync(readStream, transformer, writeStream)
   })

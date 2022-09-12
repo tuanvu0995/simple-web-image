@@ -33,6 +33,7 @@ typings/
 
 # Build directory
 dist
+app
 
 # other
 .DS_Store

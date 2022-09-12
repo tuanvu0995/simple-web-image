@@ -1,2 +1,2 @@
-import { SimpleWebImage } from "./simple";
-export default SimpleWebImage
+import SimpleWebImage = require('./simple')
+export = SimpleWebImage

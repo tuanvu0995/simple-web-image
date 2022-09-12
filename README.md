@@ -17,24 +17,53 @@ v14.15.0
 
 ## Getting Started
 
+
 ```sh
 npm install simple-web-image
 ```
 
+### Import
 ```javascript
+
+// Commonjs
 const SimpleWebImage = require('simple-web-image')
 
-SimpleWebImage({ input: './image/TEST.JPG', output: './output' }).catch(console.log)
+// ES module
+import SimpleWebImage from 'simple-web-image'
+```
 
-// or await
+### Basic usage:
+```javascript
 
-async function run() {
-  try {
+try {
     await SimpleWebImage({ input: './image/TEST.JPG', output: './output' })
-  } catch (error) {
-    console.log(error)
-  }
+} catch (error) {
+    // code here
 }
+```
+
+
+### Using with `expressjs`:
+```typescript
+
+import express from "express"
+import SimpleWebImage from "simple-web-image"
+const app = express()
+const port = 3000
+
+// should upload with binary body
+app.post("/upload", async (req, res) => {
+  try {
+    await SimpleWebImage({ input: req, output: "./tmp/test-image" })
+    res.send("upload success")
+  } catch (err) {
+    res.send("upload fail")
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 ```
 
 ## Options
