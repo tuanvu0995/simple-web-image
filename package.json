@@ -3,6 +3,7 @@
   "version": "1.0.8",
   "description": "A simple library to process the image in many sizes for the website.",
   "main": "dist/index.js",
+  "types": "dist/*.d.ts",
   "engines": {
     "node": ">=14.15.0"
   },
@@ -29,6 +30,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist/*",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest",
@@ -36,9 +43,9 @@
     "test:coverage": "jest --coverage",
     "lint": "lint-staged",
     "changeset": "changeset",
-    "version": "changeset version",
     "release": "changeset publish",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "sharp": "^0.30.7"
@@ -47,7 +54,7 @@
     "@changesets/cli": "^2.24.3",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@types/jest": "^29.0.0",
+    "@types/jest": "^29.0.3",
     "@types/node": "^18.7.16",
     "@types/sharp": "^0.30.5",
     "husky": "^8.0.1",
