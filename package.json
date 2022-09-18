@@ -1,6 +1,6 @@
 {
   "name": "simple-web-image",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A simple library to process the image in many sizes for the website.",
   "main": "dist/index.js",
   "types": "dist/*.d.ts",
