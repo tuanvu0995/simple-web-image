@@ -1,5 +1,11 @@
 # simple-web-image
 
+## 1.0.9
+
+### Patch Changes
+
+- 1a33ddc: feat: move to typescript
+
 ## 1.0.8
 
 ### Patch Changes
