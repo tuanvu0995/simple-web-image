@@ -34,6 +34,7 @@ typings/
 # Build directory
 dist
 app
+tmp
 
 # other
 .DS_Store
