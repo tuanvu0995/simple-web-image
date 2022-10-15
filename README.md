@@ -5,6 +5,11 @@
 
 > A simple library to process the image to many sizes for the website.
 
+# Features
+* Optimize the image size and quality of the website.
+* Resize images to different sizes to use for desktop and mobile. It works better for the lazy load.
+* Store the output locally or in the cloud storage (ext: s3, minio, ...).
+
 ## Prerequisites
 
 This project requires NodeJS (version 14 or later) and NPM. Node and NPM are really easy to install. To make sure you have them available on your machine, try running the following command.
@@ -23,7 +28,7 @@ npm install simple-web-image
 ```
 
 ### Import
-```javascript
+```typescript
 
 // Commonjs
 const SimpleWebImage = require('simple-web-image')
@@ -33,10 +38,27 @@ import SimpleWebImage from 'simple-web-image'
 ```
 
 ### Basic usage:
-```javascript
+```typescript
+
+import SimpleWebImage from 'simple-web-image'
+
+const config = {
+    drives: {
+        local: { rootDir: './tmp/output/simple-web-image' },
+        s3: {
+            accessKeyId: "THE AWS ACCESS KEY ID",
+            secretAccessKey: "THE AWS SECRET ACCESS KEY",
+            bucket: "simple-web-image"
+            region: "us-east-1"
+        }
+    }
+}
+
+const simple = SimpleWebImage(config)
 
 try {
-    await SimpleWebImage({ input: './image/TEST.JPG', output: './output' })
+    await simple.drive('local').put(req, './tmp/output/simple-web-image/image-name')
+    await simple.drive('s3').put(req, './tmp/output/simple-web-image/image-name')
 } catch (error) {
     // code here
 }
@@ -51,10 +73,14 @@ import SimpleWebImage from "simple-web-image"
 const app = express()
 const port = 3000
 
+const config = {}
+
+const simple = SimpleWebImage(config)
+
 // should upload with binary body
 app.post("/upload", async (req, res) => {
   try {
-    await SimpleWebImage({ input: req, output: "./tmp/test-image" })
+    await simple.drive('local').put(req, './tmp/output/simple-web-image/image-name')
     res.send("upload success")
   } catch (err) {
     res.send("upload fail")
@@ -122,4 +148,4 @@ See the [ROADMAP.md](ROADMAP.md) file
 
 ## License
 
-[MIT License]LICENSE) © Vu Lai
+[MIT License](LICENSE) © Vu Lai
