@@ -40,7 +40,7 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: npm run release
-          commit: chore(release): Release version {{ steps.changesets.outputs.publishedPackages[0].version }}
+          commit: "chore(release): Release version {{ steps.changesets.outputs.publishedPackages[0].version }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
