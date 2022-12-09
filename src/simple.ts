@@ -25,7 +25,7 @@ const defaultConfig: ConfigContract = {
 
 const pipelineAsync = promisify(pipeline)
 
-class SimpleWImg {
+export default class SimpleWImg {
   driveInstance: DriveContract
   config: ConfigContract
 
@@ -51,7 +51,7 @@ class SimpleWImg {
    * @param input - The file path or ReadStream
    * @param filePath - The file path + name will be saved (not include extension)
    */
-  async put(input: string | ReadStream, filePath: string): Promise<void> {
+  async put(input: string | ReadStream | any, filePath: string): Promise<void> {
     if (!this.driveInstance) {
       console.log('Using local drive')
       this.driveInstance = new LocalDrive(this.config)
@@ -81,8 +81,4 @@ class SimpleWImg {
       throw new Error("Can't process the input image")
     }
   }
-}
-
-export = function SimpleWebImage(config?: ConfigContract): SimpleWImg {
-  return new SimpleWImg(config)
 }

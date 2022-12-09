@@ -27,16 +27,6 @@ v14.15.0
 npm install simple-web-image
 ```
 
-### Import
-```typescript
-
-// Commonjs
-const SimpleWebImage = require('simple-web-image')
-
-// ES module
-import SimpleWebImage from 'simple-web-image'
-```
-
 ### Basic usage:
 ```typescript
 
@@ -48,13 +38,13 @@ const config = {
         s3: {
             accessKeyId: "THE AWS ACCESS KEY ID",
             secretAccessKey: "THE AWS SECRET ACCESS KEY",
-            bucket: "simple-web-image"
+            bucket: "simple-web-image",
             region: "us-east-1"
         }
     }
 }
 
-const simple = SimpleWebImage(config)
+const simple = new SimpleWebImage(config)
 
 try {
     await simple.drive('local').put(req, './tmp/output/simple-web-image/image-name')
@@ -75,7 +65,7 @@ const port = 3000
 
 const config = {}
 
-const simple = SimpleWebImage(config)
+const simple = new SimpleWebImage(config)
 
 // should upload with binary body
 app.post("/upload", async (req, res) => {
@@ -92,45 +82,7 @@ app.listen(port, () => {
 })
 ```
 
-## Options
-
-```javascript
-{
-    // The input source. This option can be a path (string) or ReadStream.
-    input: './image.png',
-
-    // The output directory. This path should be unique for each image.
-    output: './output/unique-image-id',
-
-    // Optional - The input format. This field is required for correct image processing. If undefined, "jpg" will be used, but that may be risky.
-    format = 'jpg',
-
-    // Optional - The custom transforms
-    transform: [
-        {
-            name: 'image',
-            transform: { size: 1600, fit: 'inside', format: 'jpg' },
-        },
-        {
-            name: 'large',
-            transform: { size: 1000, fit: 'inside', format: 'jpg' },
-        },
-        {
-            name: 'medium',
-            transform: { size: 600, fit: 'inside', format: 'jpg' },
-        },
-        {
-            name: 'small',
-            transform: { size: 235, fit: 'cover', format: 'png' },
-        },
-        {
-            name: 'thumbnail',
-            transform: { size: 100, fit: 'cover', format: 'png' },
-        }
-    ]
-}
-
-```
+Look at the [example](https://github.com/tuanvu0995/swi-example.git) repo for more details.
 
 ## Contributing
 

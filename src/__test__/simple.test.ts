@@ -28,7 +28,7 @@ describe('Local Drive', () => {
   })
 
   test('input is file path', async () => {
-    const simpleWebImage = SimpleWebImage(config)
+    const simpleWebImage = new SimpleWebImage(config)
     const simple = simpleWebImage.drive('local')
 
     const uniqueFileName = 'test-path'
@@ -40,7 +40,7 @@ describe('Local Drive', () => {
   })
 
   test('readStream is file path', async () => {
-    const simpleWebImage = SimpleWebImage(config)
+    const simpleWebImage = new SimpleWebImage(config)
     const simple = simpleWebImage.drive('local')
 
     const readStream = createReadStream('./assets/test-img.png')
@@ -52,25 +52,4 @@ describe('Local Drive', () => {
       expect(existsSync(path.resolve(__dirname, `../../${testOutput}/${uniqueFileName}-${name}`))).toBe(true)
     })
   })
-})
-
-describe('Local Drive', () => {
-  afterEach(() => {
-    rmSync(testOutput, { recursive: true, force: true })
-  })
-
-  test.skip('input is file path', async () => {
-    const simpleWebImage = SimpleWebImage(config)
-    const simple = simpleWebImage.drive('s3')
-
-    const uniqueFileName = '2022-12-1/test-path'
-    await simple.put('./assets/test-img.png', uniqueFileName)
-
-    names.map((name) => {
-      expect(existsSync(path.resolve(__dirname, `../../${testOutput}/${uniqueFileName}-${name}`))).toBe(true)
-    })
-
-    // todo: check if file exists on s3
-  })
-
 })
