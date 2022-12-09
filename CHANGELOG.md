@@ -1,5 +1,12 @@
 # simple-web-image
 
+## 2.0.0
+
+### Major Changes
+
+- b542ef6: feat: refactor and add support s3
+  fix: type defination
+
 ## 1.0.9
 
 ### Patch Changes
